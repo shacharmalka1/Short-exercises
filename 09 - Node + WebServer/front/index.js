@@ -14,9 +14,9 @@ async function checkAdmission(studentName, age, ability, e) {
   const validAge = age >= validStudent.minAge && age <= validStudent.maxAge;
   const validAbility = validStudent.ability.includes(ability);
   if (validName && validAge && validAbility)
-    alert("you are allowed to enter the course✅");
+    alert("allowed to enter the course");
   else {
-    alert("you aren't allowed to enter the course❌");
+    alert("not allowed to enter the course");
   }
 }
 getButton.addEventListener("click", (e) =>
