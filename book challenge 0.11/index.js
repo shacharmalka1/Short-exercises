@@ -12,12 +12,12 @@ class BookList {
     this.arr.push(book);
   }
   finishCurrentBook() {
+    this.numRead++;
+    this.numNotRead--;
     this.currentBook.read = true;
     this.currentBook.readDate = Date(Date.now());
-    this.currentBook;
     this.lastBook = this.currentBook;
     this.currentBook = this.nextBook;
-
     for (let book of this.arr) {
       if (book.read === false) {
         this.nextBook = book;
